@@ -29,6 +29,12 @@
 					<li><a href="${pageContext.request.contextPath}/person/grid"><spring:message code="app.menu.register.person"/></a></li>
 				</ul>
 			</li>
+			<li><a href="#"><spring:message code="app.menu.apresentation"/></a>
+				<ul>
+					<li><a href="${pageContext.request.contextPath}/counselPoint/grid"><spring:message code="app.menu.apresentation.counselPoint"/></a></li>
+					<li><a href="${pageContext.request.contextPath}/assignmentKind/grid"><spring:message code="app.menu.apresentation.assignmentKind"/></a></li>
+				</ul>
+			</li>
 		</ul>
 		</nav> <nav id="breadcrumb"> <a href="#"><spring:message code="app.breadcrumb.home"/></a></nav>
 	</header>
