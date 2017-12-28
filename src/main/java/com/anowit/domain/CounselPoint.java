@@ -18,7 +18,7 @@ public class CounselPoint {
 	@GeneratedValue
 	private Integer id;
 
-	@Column(nullable = false)
+	@Column(nullable = false, unique = true)
 	private Integer study;
 
 	@Column(nullable = false)
