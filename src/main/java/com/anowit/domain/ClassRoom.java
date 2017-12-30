@@ -15,6 +15,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table
+//@GenerateLayers
 public class ClassRoom {
 
 	@Id
@@ -24,41 +25,13 @@ public class ClassRoom {
 	@ManyToOne
 	private Person counselor;
 	@Embedded
-	//	@AttributeOverrides({ //
-	//			@AttributeOverride(name = "kind", column = @Column(name = "bibleReadingAssignmentKind")),
-	//			@AttributeOverride(name = "source", column = @Column(name = "bibleReadingAssignmentSource")), //
-	//			@AttributeOverride(name = "handler", column = @Column(name = "bibleReadingAssignmentHandler")), //
-	//			@AttributeOverride(name = "assistant", column = @Column(name = "bibleReadingAssignmentAssistant")), //
-	//			@AttributeOverride(name = "counselPoint", column = @Column(name = "bibleReadingAssignmentCounselPoint")),//
-	//	})
 	private Assignment bibleReadingAssignment;
-	//	@Embedded
-	//	@AttributeOverrides({ //
-	//			@AttributeOverride(name = "kind", column = @Column(name = "firstAssignmentKind")),
-	//			@AttributeOverride(name = "source", column = @Column(name = "firstAssignmentSource")), //
-	//			@AttributeOverride(name = "handler", column = @Column(name = "firstAssignmentHandler")), //
-	//			@AttributeOverride(name = "assistant", column = @Column(name = "firstAssignmentAssistant")), //
-	//			@AttributeOverride(name = "counselPoint", column = @Column(name = "firstAssignmentCounselPoint")),//
-	//	})
-	//	private Assignment firstAssignment;
-	//	@Embedded
-	//	@AttributeOverrides({ //
-	//			@AttributeOverride(name = "kind", column = @Column(name = "secondAssignmentKind")),
-	//			@AttributeOverride(name = "source", column = @Column(name = "secondAssignmentSource")), //
-	//			@AttributeOverride(name = "handler", column = @Column(name = "secondAssignmentHandler")), //
-	//			@AttributeOverride(name = "assistant", column = @Column(name = "secondAssignmentAssistant")), //
-	//			@AttributeOverride(name = "counselPoint", column = @Column(name = "secondAssignmentCounselPoint")),//
-	//	})
-	//	private Assignment secondAssignment;
-	//	@Embedded
-	//	@AttributeOverrides({ //
-	//			@AttributeOverride(name = "kind", column = @Column(name = "thirdAssignmentKind")),
-	//			@AttributeOverride(name = "source", column = @Column(name = "thirdAssignmentSource")), //
-	//			@AttributeOverride(name = "handler", column = @Column(name = "thirdAssignmentHandler")), //
-	//			@AttributeOverride(name = "assistant", column = @Column(name = "thirdAssignmentAssistant")), //
-	//			@AttributeOverride(name = "counselPoint", column = @Column(name = "thirdAssignmentCounselPoint")),//
-	//	})
-	//	private Assignment thirdAssignment;
+	@Embedded
+	private Assignment firstAssignment;
+	@Embedded
+	private Assignment secondAssignment;
+	@Embedded
+	private Assignment thirdAssignment;
 
 	public Integer getId() {
 		return id;
@@ -92,27 +65,28 @@ public class ClassRoom {
 		this.bibleReadingAssignment = bibleReadingAssignment;
 	}
 
-	//	public Assignment getFirstAssignment() {
-	//		return firstAssignment;
-	//	}
-	//
-	//	public void setFirstAssignment(Assignment firstAssignment) {
-	//		this.firstAssignment = firstAssignment;
-	//	}
-	//
-	//	public Assignment getSecondAssignment() {
-	//		return secondAssignment;
-	//	}
-	//
-	//	public void setSecondAssignment(Assignment secondAssignment) {
-	//		this.secondAssignment = secondAssignment;
-	//	}
-	//
-	//	public Assignment getThirdAssignment() {
-	//		return thirdAssignment;
-	//	}
-	//
-	//	public void setThirdAssignment(Assignment thirdAssignment) {
-	//		this.thirdAssignment = thirdAssignment;
-	//	}
+	public Assignment getFirstAssignment() {
+		return firstAssignment;
+	}
+
+	public void setFirstAssignment(Assignment firstAssignment) {
+		this.firstAssignment = firstAssignment;
+	}
+
+	public Assignment getSecondAssignment() {
+		return secondAssignment;
+	}
+
+	public void setSecondAssignment(Assignment secondAssignment) {
+		this.secondAssignment = secondAssignment;
+	}
+
+	public Assignment getThirdAssignment() {
+		return thirdAssignment;
+	}
+
+	public void setThirdAssignment(Assignment thirdAssignment) {
+		this.thirdAssignment = thirdAssignment;
+	}
+
 }

@@ -33,6 +33,7 @@
 				<ul>
 					<li><a href="${pageContext.request.contextPath}/counselPoint/grid"><spring:message code="app.menu.apresentation.counselPoint"/></a></li>
 					<li><a href="${pageContext.request.contextPath}/assignmentKind/grid"><spring:message code="app.menu.apresentation.assignmentKind"/></a></li>
+					<li><a href="${pageContext.request.contextPath}/classRoom/grid"><spring:message code="app.menu.apresentation.classRoom"/></a></li>
 				</ul>
 			</li>
 		</ul>
