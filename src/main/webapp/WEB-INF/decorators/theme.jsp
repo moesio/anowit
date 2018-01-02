@@ -22,18 +22,15 @@
 		<h1><a href="${pageContext.request.contextPath}"><spring:message code="app.name"/></a></h1>
 		<nav id="menu">
 		<ul>
-			<li><a href="#"><spring:message code="app.menu.register"/></a>
+			<li><a href="#"><spring:message code="app.menu.meeting"/></a>
 				<ul>
-					<li><a href="${pageContext.request.contextPath}/privilege/grid"><spring:message code="app.menu.register.privilege"/></a></li>
-					<li><a href="${pageContext.request.contextPath}/group/grid/0/10"><spring:message code="app.menu.register.group"/></a></li>
-					<li><a href="${pageContext.request.contextPath}/person/grid"><spring:message code="app.menu.register.person"/></a></li>
-				</ul>
-			</li>
-			<li><a href="#"><spring:message code="app.menu.apresentation"/></a>
-				<ul>
+					<li><a href="${pageContext.request.contextPath}/privilege/grid"><spring:message code="app.menu.meeting.privilege"/></a></li>
+					<li><a href="${pageContext.request.contextPath}/group/grid/0/10"><spring:message code="app.menu.meeting.group"/></a></li>
+					<li><a href="${pageContext.request.contextPath}/person/grid"><spring:message code="app.menu.meeting.person"/></a></li>
 					<li><a href="${pageContext.request.contextPath}/counselPoint/grid"><spring:message code="app.menu.apresentation.counselPoint"/></a></li>
 					<li><a href="${pageContext.request.contextPath}/assignmentKind/grid"><spring:message code="app.menu.apresentation.assignmentKind"/></a></li>
 					<li><a href="${pageContext.request.contextPath}/classRoom/grid"><spring:message code="app.menu.apresentation.classRoom"/></a></li>
+					<li><a href="${pageContext.request.contextPath}/program/grid"><spring:message code="app.menu.apresentation.program"/></a></li>
 				</ul>
 			</li>
 		</ul>

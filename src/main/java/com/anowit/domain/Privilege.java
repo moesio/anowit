@@ -26,8 +26,9 @@ public class Privilege {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public Privilege setId(Integer id) {
 		this.id = id;
+		return this;
 	}
 
 	public String getName() {
@@ -37,4 +38,10 @@ public class Privilege {
 	public void setName(String name) {
 		this.name = name;
 	}
+
+	@Override
+	public String toString() {
+		return "Privilege [name=" + name + "]";
+	}
+
 }
