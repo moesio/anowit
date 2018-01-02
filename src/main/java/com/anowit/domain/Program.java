@@ -3,6 +3,7 @@ package com.anowit.domain;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
@@ -23,7 +24,7 @@ public class Program {
 	private String period;
 	@ManyToOne
 	private Group group;
-	@OneToMany
+	@OneToMany(fetch = FetchType.EAGER)
 	private List<Privilege> privileges;
 
 	//	private Calendar midweekDate;
@@ -80,6 +81,11 @@ public class Program {
 
 	public void setGroup(Group group) {
 		this.group = group;
+	}
+
+	@Override
+	public String toString() {
+		return "Program [id=" + id + ", period=" + period + ", group=" + group + ", privileges=" + privileges + "]";
 	}
 
 	//	public Integer getId() {

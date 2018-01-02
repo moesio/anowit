@@ -22,4 +22,37 @@ public class Week {
 	@ManyToOne
 	private Group group;
 	private MidweekMeeting midweekMeeting;
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getPeriod() {
+		return period;
+	}
+
+	public void setPeriod(String period) {
+		this.period = period;
+	}
+
+	public Group getGroup() {
+		return group;
+	}
+
+	public void setGroup(Group group) {
+		this.group = group;
+	}
+
+	public MidweekMeeting getMidweekMeeting() {
+		return midweekMeeting;
+	}
+
+	public void setMidweekMeeting(MidweekMeeting midweekMeeting) {
+		this.midweekMeeting = midweekMeeting;
+	}
+
 }

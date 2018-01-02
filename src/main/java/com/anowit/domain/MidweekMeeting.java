@@ -20,4 +20,20 @@ public class MidweekMeeting {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private Calendar date;
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public Calendar getDate() {
+		return date;
+	}
+
+	public void setDate(Calendar date) {
+		this.date = date;
+	}
 }
