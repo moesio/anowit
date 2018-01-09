@@ -1,6 +1,6 @@
 package com.anowit.service;
 
-import com.anowit.domain.Program;
+import com.anowit.domain.Schedule;
 import com.seimos.commons.service.GenericService;
 
 /**
@@ -9,5 +9,5 @@ import com.seimos.commons.service.GenericService;
  *
  * @date 2017-12-30 18:01:31
  */
-public interface ProgramService extends GenericService<Program> {
+public interface ScheduleService extends GenericService<Schedule> {
 }

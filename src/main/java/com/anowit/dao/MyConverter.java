@@ -4,16 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.core.convert.converter.Converter;
-import org.springframework.stereotype.Component;
 
 import com.anowit.domain.Privilege;;
 
 /**
  * @author moesio.medeiros
- * @date 1 de jan de 2018 21:14:23 
+ * @date 1 de jan de 2018 21:14:23
  *
  */
-@Component
+//@Component
 public class MyConverter implements Converter<String[], List<Privilege>> {
 
 	@Override

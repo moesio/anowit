@@ -5,30 +5,31 @@ import javax.persistence.ManyToOne;
 
 /**
  * @author moesio.medeiros
- * @date 21 de dez de 2017 10:18:51 
+ * @date 21 de dez de 2017 10:18:51
  *
  */
 @Embeddable
-public class Assignment {
-
-	private String source;
+public class Assignment extends Part {
 	@ManyToOne
-	private Person handler;
+	private Person assistant;
 
-	public String getSource() {
-		return source;
+	@ManyToOne
+	private CounselPoint counselPoint;
+
+	public Person getAssistant() {
+		return assistant;
 	}
 
-	public void setSource(String source) {
-		this.source = source;
+	public void setAssistant(Person assistant) {
+		this.assistant = assistant;
 	}
 
-	public Person getHandler() {
-		return handler;
+	public CounselPoint getCounselPoint() {
+		return counselPoint;
 	}
 
-	public void setHandler(Person handler) {
-		this.handler = handler;
+	public void setCounselPoint(CounselPoint counselPoint) {
+		this.counselPoint = counselPoint;
 	}
 
 }
