@@ -1,6 +1,6 @@
 package com.anowit.domain;
 
-import java.util.Calendar;
+import java.time.LocalDate;
 
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
@@ -21,7 +21,7 @@ public class Schedule {
 	@GeneratedValue
 	private Integer id;
 
-	private Calendar midweekDate;
+	private LocalDate midweekDate;
 
 	@ManyToOne
 	private Person midweekChairman;
@@ -33,7 +33,7 @@ public class Schedule {
 	private Song midweekInitialSong;
 
 	@ManyToOne
-	private Person prayer;
+	private Person initialPrayer;
 
 	@Embedded
 	private Part treasureTalk;
@@ -47,6 +47,9 @@ public class Schedule {
 	@Embedded
 	private Classroom auxiliaryClass;
 
+	@ManyToOne
+	private Song midweekMiddleSong;
+
 	@Embedded
 	private Part livingFirstPart;
 
@@ -57,18 +60,15 @@ public class Schedule {
 	private Study congregationBibleStudy;
 
 	@ManyToOne
-	private Song midweekMiddleSong;
-
-	@ManyToOne
 	private Song midweekFinalSong;
 
-	@ManyToOne
-	private Song weekendnitialSong;
+	private LocalDate weekendDate;
 
 	@ManyToOne
 	private Person weekendChairman;
 
-	private Calendar weekendDate;
+	@ManyToOne
+	private Song weekendnitialSong;
 
 	@Embedded
 	private PublicTalk publicTalk;
@@ -87,11 +87,11 @@ public class Schedule {
 		this.id = id;
 	}
 
-	public Calendar getMidweekDate() {
+	public LocalDate getMidweekDate() {
 		return midweekDate;
 	}
 
-	public void setMidweekDate(Calendar midweekDate) {
+	public void setMidweekDate(LocalDate midweekDate) {
 		this.midweekDate = midweekDate;
 	}
 
@@ -119,12 +119,12 @@ public class Schedule {
 		this.midweekInitialSong = midweekInitialSong;
 	}
 
-	public Person getPrayer() {
-		return prayer;
+	public Person getInitialPrayer() {
+		return initialPrayer;
 	}
 
-	public void setPrayer(Person prayer) {
-		this.prayer = prayer;
+	public void setInitialPrayer(Person initialPrayer) {
+		this.initialPrayer = initialPrayer;
 	}
 
 	public Part getTreasureTalk() {
@@ -159,6 +159,14 @@ public class Schedule {
 		this.auxiliaryClass = auxiliaryClass;
 	}
 
+	public Song getMidweekMiddleSong() {
+		return midweekMiddleSong;
+	}
+
+	public void setMidweekMiddleSong(Song midweekMiddleSong) {
+		this.midweekMiddleSong = midweekMiddleSong;
+	}
+
 	public Part getLivingFirstPart() {
 		return livingFirstPart;
 	}
@@ -183,14 +191,6 @@ public class Schedule {
 		this.congregationBibleStudy = congregationBibleStudy;
 	}
 
-	public Song getMidweekMiddleSong() {
-		return midweekMiddleSong;
-	}
-
-	public void setMidweekMiddleSong(Song midweekMiddleSong) {
-		this.midweekMiddleSong = midweekMiddleSong;
-	}
-
 	public Song getMidweekFinalSong() {
 		return midweekFinalSong;
 	}
@@ -199,12 +199,12 @@ public class Schedule {
 		this.midweekFinalSong = midweekFinalSong;
 	}
 
-	public Song getWeekendnitialSong() {
-		return weekendnitialSong;
+	public LocalDate getWeekendDate() {
+		return weekendDate;
 	}
 
-	public void setWeekendnitialSong(Song weekendnitialSong) {
-		this.weekendnitialSong = weekendnitialSong;
+	public void setWeekendDate(LocalDate weekendDate) {
+		this.weekendDate = weekendDate;
 	}
 
 	public Person getWeekendChairman() {
@@ -215,12 +215,12 @@ public class Schedule {
 		this.weekendChairman = weekendChairman;
 	}
 
-	public Calendar getWeekendDate() {
-		return weekendDate;
+	public Song getWeekendnitialSong() {
+		return weekendnitialSong;
 	}
 
-	public void setWeekendDate(Calendar weekendDate) {
-		this.weekendDate = weekendDate;
+	public void setWeekendnitialSong(Song weekendnitialSong) {
+		this.weekendnitialSong = weekendnitialSong;
 	}
 
 	public PublicTalk getPublicTalk() {

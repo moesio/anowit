@@ -5,3 +5,4 @@
 .settings/
 /.apt_generated/
 /.factorypath
+/*.db.*

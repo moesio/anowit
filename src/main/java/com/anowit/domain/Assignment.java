@@ -2,6 +2,7 @@ package com.anowit.domain;
 
 import javax.persistence.Embeddable;
 import javax.persistence.ManyToOne;
+import javax.persistence.MappedSuperclass;
 
 /**
  * @author moesio.medeiros
@@ -9,20 +10,11 @@ import javax.persistence.ManyToOne;
  *
  */
 @Embeddable
+@MappedSuperclass
 public class Assignment extends Part {
-	@ManyToOne
-	private Person assistant;
 
 	@ManyToOne
 	private CounselPoint counselPoint;
-
-	public Person getAssistant() {
-		return assistant;
-	}
-
-	public void setAssistant(Person assistant) {
-		this.assistant = assistant;
-	}
 
 	public CounselPoint getCounselPoint() {
 		return counselPoint;

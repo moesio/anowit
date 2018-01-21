@@ -12,44 +12,47 @@ import javax.persistence.Embedded;
 public class Classroom {
 
 	@Embedded
-	private Assignment bibleReadingAssignment;
+	private Assignment bibleReading;
+
 	@Embedded
-	private Assignment firstAssignment;
+	private Presentation first;
+
 	@Embedded
-	private Assignment secondAssignment;
+	private Presentation second;
+
 	@Embedded
-	private Assignment thirdAssignment;
+	private Presentation third;
 
-	public Assignment getBibleReadingAssignment() {
-		return bibleReadingAssignment;
+	public Assignment getBibleReading() {
+		return bibleReading;
 	}
 
-	public void setBibleReadingAssignment(Assignment bibleReadingAssignment) {
-		this.bibleReadingAssignment = bibleReadingAssignment;
+	public void setBibleReading(Assignment bibleReading) {
+		this.bibleReading = bibleReading;
 	}
 
-	public Assignment getFirstAssignment() {
-		return firstAssignment;
+	public Presentation getFirst() {
+		return first;
 	}
 
-	public void setFirstAssignment(Assignment firstAssignment) {
-		this.firstAssignment = firstAssignment;
+	public void setFirst(Presentation first) {
+		this.first = first;
 	}
 
-	public Assignment getSecondAssignment() {
-		return secondAssignment;
+	public Presentation getSecond() {
+		return second;
 	}
 
-	public void setSecondAssignment(Assignment secondAssignment) {
-		this.secondAssignment = secondAssignment;
+	public void setSecond(Presentation second) {
+		this.second = second;
 	}
 
-	public Assignment getThirdAssignment() {
-		return thirdAssignment;
+	public Presentation getThird() {
+		return third;
 	}
 
-	public void setThirdAssignment(Assignment thirdAssignment) {
-		this.thirdAssignment = thirdAssignment;
+	public void setThird(Presentation third) {
+		this.third = third;
 	}
 
 }

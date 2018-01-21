@@ -1,6 +1,6 @@
 package com.anowit.domain;
 
-import java.util.Calendar;
+import java.time.LocalDate;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 /**
  * @author moesio.medeiros
- * @date 31 de dez de 2017 16:42:05 
+ * @date 31 de dez de 2017 16:42:05
  *
  */
 @Entity
@@ -19,7 +19,8 @@ public class MidweekMeeting {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	private Calendar date;
+
+	private LocalDate date;
 
 	public Integer getId() {
 		return id;
@@ -29,11 +30,11 @@ public class MidweekMeeting {
 		this.id = id;
 	}
 
-	public Calendar getDate() {
+	public LocalDate getDate() {
 		return date;
 	}
 
-	public void setDate(Calendar date) {
+	public void setDate(LocalDate date) {
 		this.date = date;
 	}
 }

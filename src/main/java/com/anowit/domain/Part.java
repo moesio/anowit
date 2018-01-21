@@ -2,6 +2,7 @@ package com.anowit.domain;
 
 import javax.persistence.Embeddable;
 import javax.persistence.ManyToOne;
+import javax.persistence.MappedSuperclass;
 
 /**
  * @author moesio
@@ -9,6 +10,7 @@ import javax.persistence.ManyToOne;
  *
  */
 @Embeddable
+@MappedSuperclass
 public class Part {
 	protected String material;
 
