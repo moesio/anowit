@@ -1,4 +1,14 @@
 <#include "/grid-builder.ftl" />
+
+<#assign gridFieldsCandidate>
+	<@spring.messageText "${page.entityName}.page.grid.fields" ""/>
+</#assign>
+<#if gridFieldsCandidate?length gt 0>
+	<#assign gridFields = gridFieldsCandidate?split(",")>
+<#else>
+	<#assign gridFields = {}>
+</#if>
+
 <html>
 	<head>
 		<title>
@@ -18,7 +28,7 @@
 										<#assign name>
 											${field.name[field.name?string?index_of('.')+1..]}<#t>
 										</#assign>
-										<#if field['view']?has_content>
+										<#if (gridFields?size gt 0 && gridFields?seq_contains(name)) || (gridFields?size == 0)>
 											<td><@compress>
 												<@spring.messageText "${field.label}" "${field.label}"/>
 											</td></@compress>
@@ -33,15 +43,13 @@
 							<tr>
 							<#list page.formFields?keys as path>
 								<#assign field = getFormField(item, path) />
-								<#if "${field.type}" != "HIDDEN">
+								<#if field['view']?has_content>
 									<#assign name>
 										${field.name[field.name?string?index_of('.')+1..]}<#t>
 									</#assign>
-									<#if field['view']?has_content>
-										<td><@compress>
-											${field.view}
-										</@compress></td>
-									</#if>
+									<td><@compress>
+										${field.view}
+									</@compress></td>
 								</#if>
 							</#list>
 							<td>
