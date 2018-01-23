@@ -26,11 +26,14 @@ public class ScheduleController extends GenericCrudController<Schedule> {
 		this.validator = validator;
 	}
 
+	@Override
 	public ScheduleValidator getValidator() {
 		return validator;
 	}
 
+	@Override
 	public ScheduleService getService() {
 		return service;
 	}
+
 }

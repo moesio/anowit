@@ -1,6 +1,6 @@
 package anowit;
 
-import java.util.List;
+import java.util.LinkedHashMap;
 
 import org.junit.Test;
 
@@ -18,8 +18,10 @@ public class TestScheduleMapping {
 	@Test
 	public void test() {
 		Page page = new Page(Schedule.class);
-		List<FormField> formFields = page.getFormFields();
-		for (FormField formField : formFields) {
+		LinkedHashMap<String, FormField> formFields = page.getFormFields();
+
+		for (String key : formFields.keySet()) {
+			FormField formField = formFields.get(key);
 			System.out.println(formField.getLabel());
 		}
 		//		String label = new FormField(Schedule.class, "mainHall.bibleReading.material").getLabel();
