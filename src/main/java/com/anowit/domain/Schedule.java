@@ -21,13 +21,18 @@ public class Schedule {
 	@GeneratedValue
 	private Integer id;
 
+	private String weekLimit;
+
+	@ManyToOne
+	private Group group;
+
 	private LocalDate midweekDate;
 
 	@ManyToOne
 	private Person midweekChairman;
 
 	@ManyToOne
-	private Person auxiliaryConselor;
+	private Person auxiliaryCounselor;
 
 	@ManyToOne
 	private Song midweekInitialSong;
@@ -87,6 +92,22 @@ public class Schedule {
 		this.id = id;
 	}
 
+	public String getWeekLimit() {
+		return weekLimit;
+	}
+
+	public void setWeekLimit(String weekLimit) {
+		this.weekLimit = weekLimit;
+	}
+
+	public Group getGroup() {
+		return group;
+	}
+
+	public void setGroup(Group group) {
+		this.group = group;
+	}
+
 	public LocalDate getMidweekDate() {
 		return midweekDate;
 	}
@@ -103,12 +124,12 @@ public class Schedule {
 		this.midweekChairman = midweekChairman;
 	}
 
-	public Person getAuxiliaryConselor() {
-		return auxiliaryConselor;
+	public Person getAuxiliaryCounselor() {
+		return auxiliaryCounselor;
 	}
 
-	public void setAuxiliaryConselor(Person auxiliaryConselor) {
-		this.auxiliaryConselor = auxiliaryConselor;
+	public void setAuxiliaryCounselor(Person auxiliaryCounselor) {
+		this.auxiliaryCounselor = auxiliaryCounselor;
 	}
 
 	public Song getMidweekInitialSong() {

@@ -1,0 +1,10 @@
+.page {
+	color: #000;
+}
+
+.header {
+	background-color: #6c9;
+	width: 100%;
+	white-space: nowrap;
+	display: block; 
+}

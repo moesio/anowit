@@ -27,9 +27,6 @@
 					<li><a href="${pageContext.request.contextPath}/privilege/grid"><spring:message code="app.menu.meeting.privilege"/></a></li>
 					<li><a href="${pageContext.request.contextPath}/group/grid/0/10"><spring:message code="app.menu.meeting.group"/></a></li>
 					<li><a href="${pageContext.request.contextPath}/person/grid"><spring:message code="app.menu.meeting.person"/></a></li>
-					<li><a href="${pageContext.request.contextPath}/counselPoint/grid"><spring:message code="app.menu.presentation.counselPoint"/></a></li>
-					<li><a href="${pageContext.request.contextPath}/assignmentKind/grid"><spring:message code="app.menu.presentation.assignmentKind"/></a></li>
-					<li><a href="${pageContext.request.contextPath}/classroom/grid"><spring:message code="app.menu.presentation.classroom"/></a></li>
 					<li><a href="${pageContext.request.contextPath}/schedule/grid"><spring:message code="app.menu.presentation.schedule"/></a></li>
 				</ul>
 			</li>
